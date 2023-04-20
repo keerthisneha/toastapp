@@ -1,0 +1,97 @@
+body{
+    width: 900px;
+}
+.emptycart{
+    position: absolute;
+    top: 30%;
+    right: 0%;
+     text-align: center;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    color: #4a5662;
+    font-family: "Graphik", sans-serif;
+    font-size: 16px;
+}
+.emptycart h3{
+opacity: .5;
+margin-bottom: 8px;
+font-size: 16px;
+font-weight: 500;
+line-height: 1.25;
+display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    text-align: center;
+}
+.emptycart p{
+     opacity: .5;
+     font-size: 12px;
+     margin-bottom: 0;
+     font-weight: 400;
+     line-height: 1.33;
+     letter-spacing: 0.4px;
+         display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    text-align: center;
+}
+.orderbutton{
+     padding: 8px 16px;
+    background: linear-gradient(90deg, #97d8d8 0%, #5ad7df 100%, #17a2c0 100%);
+    box-shadow: -4px 4px 8px rgba(215, 215, 215, 0.2), 4px -4px 8px rgba(215, 215, 215, 0.2), -4px -4px 8px rgba(255, 255, 255, 0.9), 4px 4px 10px rgba(215, 215, 215, 0.9);
+    border-radius: 10px;
+    font-size: 13px;
+    letter-spacing: 1px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 100px;
+    cursor: pointer;
+        transition: 0.2s linear;
+    width: 100%;
+    border: none;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: white;
+text-decoration: none;
+    max-width: 160px;
+    margin: 32px auto;
+}
+.cartheader{
+    width: 900px;
+align-items: center;
+justify-content: center;
+    flex-direction: column;
+    margin: 0 auto;
+    margin-left: 68px;
+    position: absolute;
+    top: 30%;
+    right: 0;
+    left: 0;
+}
+.cartheader h2{
+    text-align: left;
+    margin-left: 10px;
+}
+.previousheader{
+     width: 900px;
+align-items: center;
+justify-content: center;
+    flex-direction: column;
+    margin: 0 auto;
+    margin-left: 8px;
+}
+.previousheader h2{
+    text-align: left;
+    margin-left: 10px;
+}
