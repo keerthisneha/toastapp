@@ -1,13 +1,12 @@
-.header{
-     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 100%;
-    max-width: 900px;
-    margin: 0 auto;
-    width: 100%;
-    
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  width: 100%;
 }
 .logo-flex {
   display: flex;
@@ -15,10 +14,10 @@
   justify-content: space-between;
   width: 900px;
 }
-.logo-flexing{
-     display: flex;
-     align-items: center;
-     justify-content: baseline;
+.logo-flexing {
+  display: flex;
+  align-items: center;
+  justify-content: baseline;
 }
 .image {
   border-radius: 80px;
@@ -47,7 +46,7 @@
     0.3125rem -0.3125rem 0.625rem 0 rgb(221 221 224 / 20%),
     -0.3125rem -0.3125rem 0.625rem 0 rgb(255 255 255 / 90%),
     0.3125rem 0.3125rem 0.8125rem 0 rgb(220 220 220 / 90%);
-    z-index: 1;
+  z-index: 1;
 }
 .dropdown-content p {
   background-color: white;
@@ -79,13 +78,10 @@
   width: 100%;
   box-shadow: -1px -1px 3px #fff, 1.5px 1.5px 3px rgba(174, 174, 192, 0.4);
   border-radius: 0 0 10px 10px;
-  position: fixed;
   z-index: 10;
   left: 50%;
   top: 0;
   background-color: #f1f1f1;
-  max-width: 900px;
-  transform: translate(-50%, 0);
 }
 .carthead a {
   padding: 12px;
@@ -107,8 +103,7 @@
   cursor: pointer;
 }
 
-.MuiTabs-root  .MuiButtonBase-root{
-          font-size: 18px;
-         padding: 0px 50px;
-      }
-
+.MuiTabs-root .MuiButtonBase-root {
+  font-size: 15px;
+  padding: 0px 50px;
+}

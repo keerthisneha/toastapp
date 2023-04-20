@@ -6,23 +6,19 @@ import ImportContactsIcon from "@mui/icons-material/ImportContacts";
 import LocalMallOutlinedIcon from "@mui/icons-material/LocalMallOutlined";
 import BoltIcon from "@mui/icons-material/Bolt";
 const CommonFooter = ({ cart }) => {
-  
-
   const getCartItemsCount = () =>
     cart.reduce((acc, item) => acc + item.count, 0);
 
-    const menuclick =() =>{
-      
-    }
+  const menuclick = () => {};
 
   return (
     <footer className="common-footer">
-      <div className="menu" onClick={menuclick}> 
+      <div className="menu" onClick={menuclick}>
         menu
       </div>
       <div>
         <Link to="/event">
-          <BoltIcon className="footericon" id='eventicon'/>
+          <BoltIcon className="footericon" id="eventicon" />
         </Link>
       </div>
       <div>
@@ -39,16 +35,11 @@ const CommonFooter = ({ cart }) => {
   );
 };
 
-
-const CartFooter = ({ cart,previousOrders , setPreviousOrders,currentOrders , setCurrentOrders }) => {
-  
-   const updatepreviousorderinchild = () => {
-  //     setPreviousOrders(prev => ({
-  //       ...prev,
-  //       cart
-  //     }))
-  //     setCurrentOrders([])
-   }
+const CartFooter = ({ cart, setCart, previousOrders, setPreviousOrders }) => {
+  const updatepreviousorderinchild = () => {
+    setPreviousOrders([...previousOrders, ...cart]);
+    setCart([]);
+  };
 
   const getCartItemsCount = () =>
     cart.reduce((acc, item) => acc + item.count, 0);
@@ -64,18 +55,25 @@ const CartFooter = ({ cart,previousOrders , setPreviousOrders,currentOrders , se
               <ArrowForwardIcon className="arrow-icon" />
             </span>
           </span>
-        </div >
+        </div>
       </div>
     </footer>
   );
 };
 
-const Footer = ({ cart }) => {
+const Footer = ({ cart, setCart, previousOrders, setPreviousOrders }) => {
   const { pathname } = useLocation();
   const isCartPage = pathname.includes("cart");
 
   if (isCartPage) {
-    return <CartFooter cart={cart} />;
+    return (
+      <CartFooter
+        cart={cart}
+        setCart={setCart}
+        previousOrders={previousOrders}
+        setPreviousOrders={setPreviousOrders}
+      />
+    );
   }
   return <CommonFooter cart={cart} />;
 };

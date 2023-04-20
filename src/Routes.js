@@ -5,7 +5,7 @@ import Food from "./food";
 import { Route, Routes, Navigate } from "react-router-dom";
 import Cart from "./Cart";
 
-const AppRoutes = ({ cart, setCart }) => {
+const AppRoutes = ({ cart, setCart, previousOrders }) => {
   return (
     <Routes>
       <Route path="/" element={<Navigate to="/special" />} />
@@ -27,7 +27,12 @@ const AppRoutes = ({ cart, setCart }) => {
         path="/desserts"
         element={<Desserts cart={cart} setCart={setCart} />}
       />
-      <Route path="/cart" element={<Cart cart={cart} setCart={setCart} />} />
+      <Route
+        path="/cart"
+        element={
+          <Cart cart={cart} setCart={setCart} previousOrders={previousOrders} />
+        }
+      />
     </Routes>
   );
 };
